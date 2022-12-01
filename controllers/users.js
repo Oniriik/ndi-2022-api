@@ -4,7 +4,7 @@ const Users = require("../models/users")
 // get all users
 const getUsers = async (req, res) => {
     console.log(req.body)
-    res.status(200)
+    res.status(200).send({success: true})
 }
 
 const addUser = async (req, res) => {

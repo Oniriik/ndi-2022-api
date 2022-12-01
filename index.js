@@ -1,6 +1,6 @@
 const express = require("express");
 const users = require("./routes/users");
-require("dotenv/config");
+require("dotenv/config")
 const mongoose = require("mongoose");
 
 
@@ -22,4 +22,7 @@ mongoose.connect(process.env.DB_CONNECTION, () => {
 
 app.listen(3002, () => {
     console.log("Server running on port 3002...");
+})
+app.get('/',(req,res)=>{
+    res.status(200).send({success: true, data:'ONLY CODE CHADS NDI 2022'})
 })
